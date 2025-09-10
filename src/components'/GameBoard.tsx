@@ -35,11 +35,11 @@ export default function GameBoard() {
           const matchedCards = [...newCards];
           matchedCards[firstCardIndex] = {
             ...matchedCards[firstCardIndex],
-            state: "matched",
+            state: "matched-found",
           };
           matchedCards[clickedIndex] = {
             ...matchedCards[clickedIndex],
-            state: "matched",
+            state: "matched-found",
           };
           setCards(matchedCards);
           setFirstCarIndex(null);
