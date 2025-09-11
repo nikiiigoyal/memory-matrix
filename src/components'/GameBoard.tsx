@@ -67,7 +67,7 @@ export default function GameBoard() {
       <div className="grid grid-cols-2 gap-3 text-center p-2 bg-green-100 mx-auto">
         {cards.map((card, index) => (
           <div className="card flex items-center justify-center text-lg bg-yellow-200 w-9 h-9" key={index} onClick={() => handleClick(index)}>
-            {card.state === "revealed" || card.state === "matched"
+            {card.state === "revealed" || card.state === "matched-out"
               ? card.value
               : ""}
           </div>
