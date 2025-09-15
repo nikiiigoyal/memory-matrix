@@ -10,7 +10,7 @@ function App() {
     // Called when text animation finishes
     setTimeout(() => {
       setCurrentScreen('game');
-    }, 1000); // Wait 1 second after text animation
+    }, 500); // Wait 1 second after text animation
   };
 
   const handleGameRestart = () => {

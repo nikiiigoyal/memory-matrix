@@ -7,7 +7,7 @@ interface AnimatedTextScreenProps {
 
 function AnimatedTextScreen({ onAnimationComplete }: AnimatedTextScreenProps) {
   const { RiveComponent, rive } = useRive({
-    src: 'memory_magic_text.riv', // Added slash back
+    src: 'memoryMagic_text.riv', 
     autoplay: true,
     onLoad: () => {
       console.log('Rive file loaded successfully!');
@@ -26,11 +26,11 @@ function AnimatedTextScreen({ onAnimationComplete }: AnimatedTextScreenProps) {
     }
   }, [rive]);
 
-  // Simple timer - adjust this to match your animation length
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       onAnimationComplete();
-    }, 75000); // 3 seconds
+    }, 75000); 
 
     return () => clearTimeout(timer);
   }, [onAnimationComplete]);
