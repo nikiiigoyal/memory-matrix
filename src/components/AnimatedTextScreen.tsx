@@ -37,10 +37,9 @@ function AnimatedTextScreen({ onAnimationComplete }: AnimatedTextScreenProps) {
 
   return (
     <div className="flex w-full items-center justify-center min-h-screen">
-      <RiveComponent 
-        width={1000} 
-        height={600} 
-        className="border-2 border-red-200" 
+      <RiveComponent style={{width:'1000px',height: '800px'}}
+        
+        className="border w-full border-red-200" 
       />
     </div>
   );

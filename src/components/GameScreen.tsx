@@ -2,7 +2,7 @@
 import { useRive } from '@rive-app/react-canvas';
 
 interface GameScreenProps {
-  onRestart?: () => void; 
+  onRestart?: () => void; // Made optional since you're not using it
 }
 
 function GameScreen({ onRestart }: GameScreenProps) {
