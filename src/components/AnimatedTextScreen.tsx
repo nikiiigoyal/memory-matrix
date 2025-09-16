@@ -30,16 +30,16 @@ function AnimatedTextScreen({ onAnimationComplete }: AnimatedTextScreenProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       onAnimationComplete();
-    }, 75000); 
+    }, 5000); 
 
     return () => clearTimeout(timer);
   }, [onAnimationComplete]);
 
   return (
-    <div className="flex w-full items-center justify-center min-h-screen">
-      <RiveComponent style={{width:'1000px',height: '800px'}}
+    <div className="flex w-full items-center justify-center min-h-screen bg-[#313131]">
+      <RiveComponent 
         
-        className="border w-full border-red-200" 
+        className=" w-[1000px] h-[600px] " 
       />
     </div>
   );

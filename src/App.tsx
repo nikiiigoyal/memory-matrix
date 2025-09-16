@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-[rgb(15,104,162)] flex items-center justify-center">
       {currentScreen === 'text' && (
         <AnimatedTextScreen onAnimationComplete={handleTextAnimationComplete} />
       )}
