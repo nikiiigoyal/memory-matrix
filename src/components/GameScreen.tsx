@@ -6,6 +6,8 @@ interface GameScreenProps {
 }
 
 function GameScreen({ onRestart }: GameScreenProps) {
+
+     void onRestart;
   const { RiveComponent, rive } = useRive({
     src: 'memory_game.riv', 
     autoplay: true,
