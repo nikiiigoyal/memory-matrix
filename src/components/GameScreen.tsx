@@ -32,7 +32,7 @@ function GameScreen({ username, onRestart }: GameScreenProps) {
           <h1 className="text-xl font-bold text-gray-800">
             Welcome {username}!👋
           </h1>
-          <div className="text-sm text-gray-600">
+          <div className="text-sm text-gray-800">
             Click on tiles and match them up!
           </div>
         </div>
