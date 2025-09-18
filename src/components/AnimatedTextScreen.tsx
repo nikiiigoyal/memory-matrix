@@ -29,6 +29,7 @@ function AnimatedTextScreen({ onAnimationComplete }: AnimatedTextScreenProps) {
   
   useEffect(() => {
     const timer = setTimeout(() => {
+      console.log('Animation complete, moving to welcome screen');
       onAnimationComplete();
     }, 5000); 
 
