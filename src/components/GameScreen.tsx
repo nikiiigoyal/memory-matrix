@@ -2,12 +2,12 @@
 import { useRive } from '@rive-app/react-canvas';
 
 interface GameScreenProps {
-  onRestart?: () => void; // Made optional since you're not using it
+  username: string;
+  onRestart?: () => void; 
 }
 
-function GameScreen({ onRestart }: GameScreenProps) {
+function GameScreen({ username, onRestart }: GameScreenProps) {
 
-     void onRestart;
   const { RiveComponent, rive } = useRive({
     src: 'memory_game.riv', 
     autoplay: true,
@@ -24,18 +24,51 @@ function GameScreen({ onRestart }: GameScreenProps) {
   });
 
   return (
-    <div 
-      className="mx-5 my-5 block"
-      style={{
-        width: '800px',
-        height: '685px',
-      }}
-    >
-      <RiveComponent 
-        width={1266}
-        height={685}
-        className="block w-full h-full"
-      />
+    <div className="min-h-screen bg-[rgb(15,104,162)]">
+      {/* Game Header with username */}
+      <div className='flex justify-between items-center'>
+      <div className="shadow-lg p-4">
+        <div className="max-w-4xl mx-auto flex justify-between items-center ">
+          <h1 className="text-xl font-bold text-gray-800">
+            Welcome {username}!👋
+          </h1>
+          <div className="text-sm text-gray-600">
+            Click on tiles and match them up!
+          </div>
+        </div>
+      </div>
+       <div className="mt-4 text-center">
+            <button
+              onClick={onRestart}
+              className="px-6 py-2 bg-[rgb(237,101,48)] text-white rounded-lg hover:bg-gray-300 transition-colors"
+            >
+              🔄 Restart Game
+            </button>
+          </div>
+          </div>
+
+      {/* Game Container */}
+      <div className="flex items-center justify-center">
+        <div className= "">
+          {/* Your Rive Game with proper sizing */}
+          <div 
+            className="mx-auto block"
+            style={{
+              width: '800px',
+              height: '685px',
+            }}
+          >
+            <RiveComponent 
+              width={1266}
+              height={600}
+              className="block w-full h-full"
+            />
+          </div>
+          
+          {/* Game Controls */}
+         
+        </div>
+      </div>
     </div>
   );
 }
