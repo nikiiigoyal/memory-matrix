@@ -19,7 +19,7 @@ const WelcomeScreen = ({onNameSubmit} : welcomeNAmeScreenProps) => {
         {/* Welcome Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">
-            🧠 Memory Magic
+            Memory Magic
           </h1>
           <p className="text-gray-600">
             Test your memory skills with this fun matching game!
@@ -47,9 +47,9 @@ const WelcomeScreen = ({onNameSubmit} : welcomeNAmeScreenProps) => {
           <button
             onClick={handleSubmit}
             disabled={!inputValue.trim()}
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            className="w-full bg-gradient-to-r from-blue-600 to-yellow-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:from-yellow-700 hover:to-blue-700 transform transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
           >
-            Start Playing! 🎮
+            Start Playing! 
           </button>
         </div>
 
